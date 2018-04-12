@@ -1289,7 +1289,6 @@ uint8_t H3LIS331DL::readReg(byte deviceAddr, byte Reg, byte* Data) {
     
     if(Wire.available()){
         *Data = Wire.read();    // receive a byte
-        Wire.endTransmission(); // end transmission
         return MEMS_SUCCESS;        
     }else{
         Wire.endTransmission();
